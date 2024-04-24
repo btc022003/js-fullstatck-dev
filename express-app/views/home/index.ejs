@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>这是Home页面</h1>
+    <p><%= desc %></p>
+    <ul>
+      <% list.forEach(item => { %>
+      <li><%= item %></li>
+      <% }) %>
+    </ul>
+    <button onclick="clickHandle()">点一下</button>
+    <script src="/javascripts/main.js"></script>
+    <script>
+      console.log('999');
+    </script>
+  </body>
+</html>

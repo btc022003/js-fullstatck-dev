@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录页</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="error"><%= errorMessage %></p>
+    <!-- 这个时候页面就是随便画的，如果想让页面好看和交互体验更好，就需要用到大家了 -->
+    <form method="post">
+      <ul>
+        <li>
+          <input
+            type="text"
+            required
+            placeholder="请输入用户名"
+            name="userName"
+          />
+        </li>
+        <li>
+          <input
+            type="password"
+            required
+            placeholder="请输入密码"
+            name="password"
+          />
+        </li>
+        <!-- type="submit" 点完之后会自动触发离自己最近的一个form -->
+        <li><button type="submit">登陆</button></li>
+      </ul>
+    </form>
+  </body>
+</html>
