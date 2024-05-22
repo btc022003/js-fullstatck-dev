@@ -10,12 +10,23 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: '妖仙姐姐' });
 });
 
+// ejs模版引擎的常用语法
+// <%= js表达式 %>
+// <%- 这里可以输出以恶搞富文本内容 %>
+// <% js代码 %>
 router.get('/home', (req, res) => {
-  res.render('home/index', {
-    title: '首页',
-    desc: '这是第一个页面',
-    list: [1, 2, 3, 4],
-  });
+  // 写数据库查询操作的时候 需要用到异步
+  setTimeout(() => {
+    //
+    res.render('home/index', {
+      title: '首页',
+      desc: '这是第一个页面',
+      list: [1, 2, 3, 4],
+      strHtml: `<div style="background-color: red;padding: 2rem; color: white;">
+        <h1>这是一个一级标题</h1>
+      </div>`,
+    });
+  }, 5000);
 });
 
 module.exports = router;

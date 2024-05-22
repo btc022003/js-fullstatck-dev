@@ -31,6 +31,8 @@ app.use('/', indexRouter);
 //  参数二 是我们访问这个地址的时候处理我们请求的对应的文件信息，是一个文件路径
 app.use('/api/v1/goods', require('./routes/api/v1/goods'));
 
+app.use('/admin/dashboard', require('./routes/admin/dashboard'));
+
 app.get('/login', (req, res) => {
   res.render('login', { errorMessage: '' });
 });
@@ -44,6 +46,9 @@ app.post('/login', (req, res) => {
     res.render('login', { errorMessage: '用户名或者密码错误' });
   }
 });
+
+// 此处为了快速演示效果，所以我不验证登陆
+app.use('/admin/goods', require('./routes/admin/goods')); // /admin/goods/xxx
 
 // 路由是从上往下找的，我们把需要验证登陆的路由信息都写在了这个验证之后
 app.all('*', (req, res, next) => {

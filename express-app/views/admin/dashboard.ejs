@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>看板</title>
+    <%- include('../_layouts/header.ejs') %>
+  </head>
+  <body>
+    <h1>这是看板---<%= data %></h1>
+    <button id="btn">点一下</button>
+    <%- include('../_layouts/footer.ejs') %>
+    <script>
+      $(function () {
+        $('#btn').click(function () {
+          alert('点了一下');
+        });
+      });
+    </script>
+  </body>
+</html>

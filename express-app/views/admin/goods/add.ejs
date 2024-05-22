@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品新增</title>
+    <style>
+      .container form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 这才叫web开发基础 -->
+    <div class="container">
+      <form action="/admin/goods/add" method="post">
+        <input type="text" placeholder="请输入名字" name="name" />
+        <input type="number" placeholder="请输入价格" name="price" />
+        <input type="submit" value="提交" />
+      </form>
+    </div>
+  </body>
+</html>

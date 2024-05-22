@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品列表</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <a href="/admin/goods/add">新增</a>
+
+    <table border>
+      <tr>
+        <td>序号</td>
+        <td>名字</td>
+        <td>价格</td>
+        <td>创建时间</td>
+        <td>操作</td>
+      </tr>
+      <% goods.forEach((item, index) =>{ %>
+      <tr>
+        <td><%= index+1 %></td>
+        <td><%= item.name%></td>
+        <td><%= item.price%></td>
+        <td><%= item.createdAt%></td>
+        <td>
+          <button class="px-2 py-1 bg-rose-700 text-white">删除</button>
+          <button>修改</button>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>

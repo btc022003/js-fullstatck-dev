@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Country {
+  id   String @id @unique @default(uuid())
+  name String @unique
+  desc String @default("")
+  img  String @default("")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  people    Person[]
+
+  // 表名
+  @@map("countries")
+}
+
+// 每一个model对应一个数据库中的表
+model Person {
+  // 字段名 类型 配置选项
+  //   @unique 唯一
+  //   @id  主键
+  //   @default  默认值
+  //   @map 表示手动的设置数据库中的字段名
+  id        String   @id @unique @default(uuid())
+  name      String   @default("")
+  desc      String   @default("")
+  avatar    String   @default("")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // 此处设置了外键关联
+  country   Country? @relation(fields: [countryId], references: [id])
+  countryId String?  @map("country_id")
+
+  // 表名
+  @@map("people")
+}
