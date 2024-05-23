@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理后台首页</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="bg-gray-200">
+    <div class="flex h-screen">
+      <nav class="flex-shrink-0 w-64 bg-gray-900 text-white overflow-y-auto">
+        <div class="px-4 py-2 mt-2">
+          <a
+            href="#"
+            class="block px-4 py-2 text-gray-200 hover:bg-gray-800 hover:text-white"
+            >首页</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 mt-1 text-gray-200 hover:bg-gray-800 hover:text-white"
+            >用户管理</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 mt-1 text-gray-200 hover:bg-gray-800 hover:text-white"
+            >角色管理</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 mt-1 text-gray-200 hover:bg-gray-800 hover:text-white"
+            >权限设置</a
+          >
+        </div>
+      </nav>
+      <div class="flex-1 flex flex-col">
+        <header class="bg-white shadow">
+          <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+          >
+            <a
+              href="#"
+              class="flex items-center px-2 py-1 text-gray-800 hover:text-gray-900"
+            >
+              <svg
+                class="fill-current w-6 h-6"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23 11H1c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-2h18v2c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-6c0-.6-.4-1-1-1zm-.jpg"
+                ></path>
+              </svg>
+              <span class="ml-2">管理面板</span>
+            </a>
+            <div class="flex items-center">
+              <button
+                class="flex items-center p-1 text-gray-400 hover:text-gray-600 rounded"
+              >
+                <svg
+                  class="fill-current w-4 h-4"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 215h-2v-6 12 2zm1 h2v6zm0-8h-2V7h2v2z"
+                  ></path>
+                </svg>
+                <span class="ml-1">通知</span>
+              </button>
+              <div class="ml-3 relative">
+                <div>
+                  <button
+                    class="flex items-center px-3 py-2 border rounded-md text-gray-600 border-gray-300 hover:text-gray-900 hover:border-gray-500 focus:outline-none focus:text-gray-900 focus:border-gray-500"
+                  >
+                    <img
+                      src="https://via.placeholder.com/30x30"
+                      alt="User Avatar"
+                      class="rounded-full w-8 h-8 mr-2"
+                    />
+                    John Doe
+                  </button>
+                </div>
+                <!-- Dropdown menu -->
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="flex-1 p-6 overflow-y-auto">
+          <!-- 主要内容区域 -->
+          <iframe
+            src="/admin/goods"
+            class="w-full h-full"
+            frameborder="0"
+          ></iframe>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

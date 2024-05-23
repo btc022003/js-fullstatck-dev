@@ -31,6 +31,7 @@ app.use('/', indexRouter);
 //  参数二 是我们访问这个地址的时候处理我们请求的对应的文件信息，是一个文件路径
 app.use('/api/v1/goods', require('./routes/api/v1/goods'));
 
+app.use('/admin/main', require('./routes/admin/main'));
 app.use('/admin/dashboard', require('./routes/admin/dashboard'));
 
 app.get('/login', (req, res) => {

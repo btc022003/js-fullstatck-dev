@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>商品新增</title>
+    <link rel="stylesheet" href="/css/main.css" />
     <style>
       .container form {
         display: flex;
@@ -11,13 +12,31 @@
       }
     </style>
   </head>
-  <body>
-    <!-- 这才叫web开发基础 -->
-    <div class="container">
-      <form action="/admin/goods/add" method="post">
-        <input type="text" placeholder="请输入名字" name="name" />
-        <input type="number" placeholder="请输入价格" name="price" />
-        <input type="submit" value="提交" />
+  <body class="container mx-auto">
+    <div class="w-full">
+      <h2>编辑</h2>
+      <form class="m-form" action="/admin/goods/add" method="post">
+        <div class="form-control">
+          <label for="name">名字</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="txt"
+            placeholder="请输入名字"
+          />
+        </div>
+        <div class="form-control">
+          <label for="price">价格</label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            class="txt"
+            placeholder="请输入价格"
+          />
+        </div>
+        <button type="submit" class="btn">保存</button>
       </form>
     </div>
   </body>

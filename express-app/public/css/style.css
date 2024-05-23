@@ -4,3 +4,35 @@
 h1{
   color: orangered;
 }
+@layer components {
+  /* 表格样式 */
+  .m-table {
+    @apply  w-full border-collapse;
+  }
+  .m-table th {
+    @apply bg-gray-200 dark:bg-gray-700 dark:text-white border p-3 text-left;
+  }
+  .m-table tr{
+    @apply border-b;
+  }
+  .m-table tr td {
+    @apply border p-3;
+  }
+  .btn{
+    @apply bg-rose-600 text-white px-2 py-1;
+  }
+
+  /* 表单样式 */
+  .m-form{
+    @apply bg-white p-8 rounded-lg shadow-xl w-full;
+  }
+  .m-form .form-control {
+    @apply mb-4
+  }
+  .m-form .form-control label {
+    @apply block text-gray-700 font-medium mb-2
+  }
+  .m-form .form-control .txt {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500
+  }
+}
